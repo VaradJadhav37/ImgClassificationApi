@@ -14,7 +14,7 @@ from io import BytesIO
 app = Flask(__name__)
 api = Api(app)
 
-client = MongoClient('mongodb+srv://VaradJ:varad21@cluster0.vpdku.mongodb.net/flask?retryWrites=true&w=majority&appName=Cluster0')
+client = MongoClient('mongodb://localhost:27017/')
 db = client.ImageRecognition
 users = db["users"]
 pretrained_model = InceptionV3(weights='imagenet')
